@@ -1,9 +1,9 @@
 <img src="new green.png" width="100%" alt="Backend Architecture Banner">
-# Maheen Sayuru 
-
-**Backend Engineer | System Architecture & DevSecOps**
-
-Architecting secure, high-concurrency backend systems and developer tools. Focused on writing clean, performant code in Java and Python environments.
+<p align="center">
+<b>Backend Engineer | System Architecture & DevSecOps</b><br>
+  Architecting secure, high-concurrency backend systems and developer tools.<br>
+  Focused on writing clean, performant code in Java and Python environments.
+</p>
 
 ### ⚙️ Technical Arsenal
 - **Languages:** Java, Python, JavaScript, SQL
