@@ -1,16 +1,18 @@
-## Hi there 👋
+# Maheen Sayuru 
+**Backend Engineer | System Architecture & DevSecOps**
 
-<!--
-**maheensayuru/maheensayuru** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Architecting secure, high-concurrency backend systems and developer tools. Focused on writing clean, performant code in Java and Python environments.
 
-Here are some ideas to get you started:
+### ⚙️ Technical Arsenal
+- **Languages:** Java, Python, JavaScript, SQL
+- **Architecture:** Multi-threading, TCP/IP Networking, REST APIs, Client-Server Models
+- **Database:** Relational Database Management Systems (RDBMS), MySQL
+- **Security:** DevSecOps Tooling, SHA-256 Cryptography, SSL/TLS Encryption
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 🏗️ Featured Engineering
+* **DevSecOps:** Engineered an automated, regex-based Git pre-commit hook to prevent secret leakage in CI/CD pipelines.
+* **Distributed Systems:** Developed a multi-threaded chat server ecosystem with secure, live JDBC database transactions. 
+* **Full-Stack:** Designed a complete, relational CRUD Learning Management System for student/course entities.
+
+---
+📫 **Reach out:** www.linkedin.com/in/maheen-sayuru | maheen.sayuru21@gmail.com
