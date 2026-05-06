@@ -1,3 +1,4 @@
+<img src="white.png" width="100%" alt="Backend Architecture Banner">
 # Maheen Sayuru 
 **Backend Engineer | System Architecture & DevSecOps**
 
