@@ -12,7 +12,8 @@
 - **Security:** DevSecOps Tooling, SHA-256 Cryptography, SSL/TLS Encryption
 
 ### 🏗️ Featured Engineering
-* **DevSecOps:** Engineered an automated, regex-based Git pre-commit hook to prevent secret leakage in CI/CD pipelines.
+* **Chaos Engineering:** Architected a multi-threaded, localized TCP proxy (FaultLine) to inject network latency and connection failures into databases, enforcing self-healing backend code.
+* **DevSecOps:** Engineered an automated, regex-based Git pre-commit hook (KeyGuard) to prevent secret leakage in CI/CD pipelines.
 * **Distributed Systems:** Developed a multi-threaded chat server ecosystem with secure, live JDBC database transactions. 
 * **Full-Stack:** Designed a complete, relational CRUD Learning Management System for student/course entities.
 
