@@ -6,16 +6,16 @@
 </p>
 
 ### ⚙️ Technical Arsenal
-- **Languages:** Java, Python, JavaScript, SQL
-- **Architecture:** Multi-threading, TCP/IP Networking, REST APIs, Client-Server Models
+- **Languages:** Java, Python, JavaScript, SQL, Go, WebAssembly (WASM)
+- **Architecture:** Multi-threading, TCP/IP Networking, REST APIs, Client-Server Models, Zero-Downtime Hot-Swapping, Mutex Concurrency
 - **Database:** Relational Database Management Systems (RDBMS), MySQL
 - **Security:** DevSecOps Tooling, SHA-256 Cryptography, SSL/TLS Encryption
 
 ### 🏗️ Featured Engineering
+* **Systems Engineering:** Architected a zero-downtime API gateway (Aegis) in Go, utilizing WebAssembly (WASI) sandboxing, LLVM compilation (TinyGo), and RWMutex locks for hot-swappable, millisecond-latency security middleware.
 * **Chaos Engineering:** Architected a multi-threaded, localized TCP proxy (FaultLine) to inject network latency and connection failures into databases, enforcing self-healing backend code.
 * **DevSecOps:** Engineered an automated, regex-based Git pre-commit hook (KeyGuard) to prevent secret leakage in CI/CD pipelines.
 * **Distributed Systems:** Developed a multi-threaded chat server ecosystem with secure, live JDBC database transactions. 
-* **Full-Stack:** Designed a complete, relational CRUD Learning Management System for student/course entities.
 
 ---
 📫 **Reach out:** www.linkedin.com/in/maheen-sayuru | maheen.sayuru21@gmail.com
