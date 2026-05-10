@@ -6,7 +6,7 @@
 </p>
 
 ### ⚙️ Technical Arsenal
-- **Languages:** Java, Python, JavaScript, SQL, Go, WebAssembly (WASM)
+- **Languages:** Go, Java, Python, SQL, WebAssembly (WASM)
 - **Architecture:** Multi-threading, TCP/IP Networking, REST APIs, Client-Server Models, Zero-Downtime Hot-Swapping, Mutex Concurrency
 - **Database:** Relational Database Management Systems (RDBMS), MySQL
 - **Security:** DevSecOps Tooling, SHA-256 Cryptography, SSL/TLS Encryption
