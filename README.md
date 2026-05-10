@@ -2,7 +2,7 @@
 <p align="center">
 <b>Backend Engineer | System Architecture & DevSecOps</b><br>
   Architecting secure, high-concurrency backend systems and developer tools.<br>
-  Focused on writing clean, performant code in Java and Python environments.
+  Engineering high-throughput, concurrent infrastructure in Go, Java, and Python.
 </p>
 
 ### ⚙️ Technical Arsenal
