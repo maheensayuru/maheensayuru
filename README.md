@@ -9,7 +9,7 @@
 
 * **Languages:** Go, Java, Python, TypeScript, SQL, WebAssembly (WASM)
 * **Architecture:** Multi-threading, TCP/IP Networking, REST APIs, Client-Server Models, Zero-Downtime Hot-Swapping, Mutex Concurrency
-* **Database:** Relational Database Management Systems (RDBMS), MySQL
+* **Database:** Relational Database Management Systems (RDBMS), MySQL, Neo4j
 * **Security:** DevSecOps Tooling, Shannon Entropy, SHA-256 Cryptography, SSL/TLS Encryption
 
 <br>
@@ -19,6 +19,7 @@
 * **DevSecOps (ShadowGuard):** Engineered an air-gapped VS Code extension in Go and TypeScript, utilizing concurrent Go routines and Shannon Entropy for real-time secret detection with zero telemetry.
 * **Systems Engineering (Aegis):** Architected a zero-downtime API gateway in Go, utilizing WebAssembly (WASI) sandboxing, LLVM compilation (TinyGo), and RWMutex locks for hot-swappable, millisecond-latency security middleware.
 * **Chaos Engineering (FaultLine):** Architected a multi-threaded, localized TCP proxy to inject network latency and connection failures into databases, enforcing self-healing backend code.
+* **AI Infrastructure (GraphRAG):** Architected a low-latency reverse proxy that intercepts client completion payloads, extracts functional entities via multi-tier regex matching, and dynamically injects 2-hop downstream codebase dependencies from Neo4j into real-time streaming LLM inference windows.
 * **DevSecOps (KeyGuard):** Engineered an automated, regex-based Git pre-commit hook to prevent secret leakage in CI/CD pipelines.
 * **Distributed Systems (Nexus):** Developed a multi-threaded chat server ecosystem with secure, live JDBC database transactions.
 
