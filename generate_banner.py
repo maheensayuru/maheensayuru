@@ -73,25 +73,25 @@ def generate_banner(config_path="asciifetch.toml", out_dir="."):
     def green_gradient(lum):
         # lum is 0.0 to 1.0
         # Smooth interpolation:
-        # Low: dark forest green (20, 70, 35)
-        # Mid: emerald matrix green (50, 185, 80)
-        # High: vibrant phosphor green (86, 225, 120)
-        # Peak: bright pale mint highlight (185, 250, 195)
+        # Low: dark forest green (25, 75, 40)
+        # Mid: emerald matrix green (55, 195, 85)
+        # High: vibrant phosphor green (95, 235, 130)
+        # Peak: bright pale mint highlight (195, 255, 205)
         if lum < 0.35:
             t = lum / 0.35
-            r = int(18 + (38 - 18) * t)
-            g = int(60 + (145 - 60) * t)
-            b = int(28 + (60 - 28) * t)
+            r = int(22 + (45 - 22) * t)
+            g = int(70 + (160 - 70) * t)
+            b = int(32 + (70 - 32) * t)
         elif lum < 0.75:
             t = (lum - 0.35) / 0.40
-            r = int(38 + (86 - 38) * t)
-            g = int(145 + (225 - 145) * t)
-            b = int(60 + (115 - 60) * t)
+            r = int(45 + (95 - 45) * t)
+            g = int(160 + (235 - 160) * t)
+            b = int(70 + (130 - 70) * t)
         else:
             t = (lum - 0.75) / 0.25
-            r = int(86 + (185 - 86) * t)
-            g = int(225 + (255 - 225) * t)
-            b = int(115 + (195 - 115) * t)
+            r = int(95 + (195 - 95) * t)
+            g = int(235 + (255 - 235) * t)
+            b = int(130 + (205 - 130) * t)
         return (min(255, max(0, r)), min(255, max(0, g)), min(255, max(0, b)))
 
     # Render Green Phosphor ASCII portrait
@@ -106,7 +106,6 @@ def generate_banner(config_path="asciifetch.toml", out_dir="."):
         r_p, g_p, b_p = colors[i]
         photo_lum = (0.299 * r_p + 0.587 * g_p + 0.114 * b_p) / 255.0
         combined_lum = 0.45 * norm_k + 0.55 * photo_lum
-        # Apply slight curve to give rich depth
         curved_lum = min(1.0, max(0.0, (combined_lum ** 0.85)))
         col_rgb = green_gradient(curved_lum)
 
@@ -118,12 +117,12 @@ def generate_banner(config_path="asciifetch.toml", out_dir="."):
         draw.text((x, y), ch, font=(fontb if bold else font), fill=col_rgb, anchor="ms")
         cells.append((prow, pcol, ch, col_rgb, bold))
 
-    # Green Palette for text
-    color_green_user = (86, 211, 100)     # #56d364 (vivid terminal green)
-    color_green_line = (35, 134, 54)      # #238636 (green divider)
-    color_green_label = (126, 231, 135)   # #7ee787 (bright mint green for labels)
-    color_text = (230, 237, 243)          # #e6edf3 (crisp text)
-    color_muted = (139, 148, 158)         # #8b949e (muted continuation)
+    # All-green terminal palette for text
+    color_green_user = (86, 211, 100)      # #56d364 (vivid terminal green)
+    color_green_line = (35, 134, 54)       # #238636 (matrix green divider)
+    color_green_label = (126, 231, 135)    # #7ee787 (bright mint green for labels)
+    color_green_value = (205, 248, 215)    # #cdf8d7 (light phosphor mint green for values)
+    color_muted = (90, 160, 105)           # #5aa069 (dim matrix green for continuations)
 
     # Render Info Block on the right side
     r = info_start_row
@@ -139,12 +138,18 @@ def generate_banner(config_path="asciifetch.toml", out_dir="."):
         if lab:
             put_text(info_col, r, lab, color_green_label, bold=True)
         put_text(info_col + cfg.label_width, r, val,
-                 color_text if lab else color_muted)
+                 color_green_value if lab else color_muted)
         r += 1
 
     r += 1
     swatch_row = r
-    for k_row, row_colors in enumerate((cfg.ansi("ansi_normal"), cfg.ansi("ansi_bold"))):
+    # Matrix shades for ANSI swatches
+    green_swatches_1 = [(15, 60, 25), (25, 95, 40), (35, 134, 54), (46, 160, 67),
+                        (56, 185, 85), (86, 211, 100), (126, 231, 135), (175, 245, 180)]
+    green_swatches_2 = [(25, 80, 35), (35, 120, 50), (46, 160, 67), (56, 195, 85),
+                        (86, 225, 115), (126, 240, 145), (180, 250, 195), (215, 255, 225)]
+    
+    for k_row, row_colors in enumerate((green_swatches_1, green_swatches_2)):
         for j, sc in enumerate(row_colors):
             x0 = ox + (info_col + j * 4) * cfg.cell_w
             y0 = oy + (swatch_row + k_row) * cfg.cell_h
@@ -205,7 +210,7 @@ def generate_banner(config_path="asciifetch.toml", out_dir="."):
     for row_no in sorted(rows):
         out.append(svg_row(row_no, rows[row_no]))
 
-    for k_row, row_colors in enumerate((cfg.ansi("ansi_normal"), cfg.ansi("ansi_bold"))):
+    for k_row, row_colors in enumerate((green_swatches_1, green_swatches_2)):
         for j, sc in enumerate(row_colors):
             x0 = ox + (info_col + j * 4) * cfg.cell_w
             y0 = oy + (swatch_row + k_row) * cfg.cell_h + 3

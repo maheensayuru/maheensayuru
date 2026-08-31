@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="fastfetch.svg" width="100%" alt="Maheen Sayuru - fastfetch profile banner" />
+  <img src="fastfetch.svg?v=green" width="100%" alt="Maheen Sayuru - fastfetch profile banner" />
 </p>
 
 ## About Me
