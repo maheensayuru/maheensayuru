@@ -1,61 +1,54 @@
 
- maheensayuru@github:~/workspace$ fastfetch
 
 
 
-
-
-
-                                                         ~ `~~
-                                               ){:=>}<*J"6)6[[(F#t+
-                                        _='Js="%h(r(GpUAE76)?h5%8S/$S;Vucr
-                                     !,)<2;Sc)\nuz<*rIsF#"j3//;C;a(E[E8KUhu?*
-                                  !7x=#3t7v1#4I=+YctIJc^>IoVV?rP/2jj)"=#Z#hiH):
-                                ;zsY2uuVX#uCoCu2*e%""\ts=J==:T*/ey>ffJxtJu!,^+:r
-                           ~i|:xIe;5\o#V3fn6)n2ofJ3oy*=F^'^.+!.]fJ<xli>``:!.--~(;"~
-                          :x%5=:!xl2\VFy#1rs>L:};,(?*~=^:_.     ~~`':..   ~` -_+~(i.
-                         '7lzjfs];.-}=:T++[*>=;|r-'~,- `   ``~_-=+:_`'_/*";{Li\'!^,,
-                        -'_'<*+)'`-.`^"<.^7^]i<_~._r):F\$8q{K]kh4/=Y+^1!77^sL"'.`:'<'
-                        ~_.      ~'       `^vJoriLY5ZmWWWWHIQm]("Z6?Vo1xs=uTL7?",.-_"
-                               -_:_><\(lza]lJ8qMWWWWWWWWWWUem}|qb[AEKik0h/2nyJ=1,-_~r             maheensayuru@github
-                        .'  _*([1>=C5k[lC6wGqbddmMNNBQQQBOJvvmOHHs]UbG6%k%k#\3nF+}(,~             ───────────────────
-                         `._c>JzFei1J3ua%VZ0PXUEbm&MNRHOO8Mxs@)X]v%9[X5XS9Z#e/FoI2jc
-                          .*nu2F(ma$Z$8SPXhwwhwpbmKHHDDH&EnJzxKc{iP9G0%ph(5rVoC4e2z?              Name         Maheen Sayuru
-                          -###rcNn9PXwUq@ObbqbOKKKDDKmO@bqw04#om|c8kA7%P?0[7pe"(Jne!              Role         Software Engineering Undergrad (Year 2)
-                          *Z7gWII60khUpqKHHgBWWBBRgMDKddqGGEUkVJmKb{7v}pppddGX44yy"!              Focus        AI Agent Systems, Backend & DevSecOps
-                          2[R2e#Je#3a5SS8ZPUGEmWWWWWQDOqpEUpEUP5JLKbiKOdKcAP%Pe"e=s<
-                         />=n\X6PZ4";32tx:Yz/[WU$UHBQRDK@@O@d@pSaoRHb[bp8k|eIVnO/jY'              Degree       BSc (Hons) in Software Engineering (Year 2)
-                        -<~~"(<Coj<7/>__=*?7:a{w&Y3ISAbKH&KKmOOU8WtRl7HNo%wiLL8IuSx               Workflow     Autonomous AI Agents across Engineering Roles
-                         [c"_-=i!T11l7,>!'_\cv7:z4GRou9hbm&HHH&@GSFo1C6EhuUt<zVFze<
-                         `_.*x(^7C#ut]<.`_^cuC#rkPAmjkE@HggRMDDHmh#2w&XoReIqWWWO4#<               Languages    Go, Python, TypeScript, Java, SQL
-                          `,}[>&AG4H5J:i*(^>s/{eX@HKKHgQWWQRD&&HDqeaMOE9@}yzrxKMDQ'               Systems      WebAssembly (WASI), TCP/IP, Reverse Proxies
-                          'YlCVWWWWBkgqP5/#/6me8p@DQQQWWWWWNH@qb@X25RRMW464C=5hgw)                Security     DevSecOps Tooling, Shannon Entropy, Zero-Telemetry
-                          r#]AWBBQBWWWMXZkXPZ80wGOHRQWWWWWQMOGwwwVx4Dd949T7]EwGKb
-                          5nNWQWWWQQBBOAwEqK&K&DHHDgRNNNgM&qEAXAA3w4d$jhQWDAFn%k                  Projects     ShadowGuard (DevSecOps), Aegis (WASM Gateway)
-                          }KURNRRQWWWWOegjSwGp@OK&DMHKOOqqEwUUwA8J14Uno8PaSddt+                                GraphRAG Interceptor, FaultLine (Chaos Proxy)
-                            ^wE\oo40xePAeNCIShEGUwwEEAwk0XwUGGEEPBN$A2qWNRNpZ
-                            'i*>,^u9YX@OU4#Ja9SXkS000SSSkkkwGpq@0QDI9PGYefz(                      GitHub       github.com/maheensayuru
-                           `'`.^+%|YW0$VI%%Wj%$S8SZ95V96SXAEd@UZ3TO2QnTJo"77                      LinkedIn     linkedin.com/in/maheen-sayuru
-                          ->(i7]}{xzeeC/kG|Te4W4jaW%I9Z000hw$aeCQL7TpuC\)pL_                      Email        maheen.sayuru21@gmail.com
-                          `=l:!>j#aeCl'.+<1/}ya3yuaWW4%VjgztRwO|[88|Z3aAcJ9
-                           ~=5kHtoYoMYd8C?*Trvoe2goCzxLwph$%USr)X(68;6g9$Au
-                           -lL}:>j"0RJ34#6^|u0HKE%rS(eZh/jTf#23VunbRmWUhkXj
-                            ^''_~\}*/hUi]5<ls;4\onfz=1<tl!{xY>*<:%2%Z88P0kj
-                             _(xtn4hr(/;3sYJ1YFouFTxL/?/\[[}{!c:aYI96ZS0SAj
-                              vlt5$S%eCtusTT|cL:{(*<';<>"\r?(7<EC45ZS88SS01r
-                              ` .(L1:+l?(i\=ri=^!!~!!_+~_',|+/vJn%5ZP008Z6qKE
-                                   '^>>=+!.:+!^..-_''_'*,7Y;9&#y49SPk0S88SkKW?
-                                    -`'`>-'^!----^~//*,]T"qxouj5$S00P88SPEGqB@"
-                                        .L(^_<**";<;r7z5{tJMF5ZS8Z$0PP0kXpDWBWs
-                                        +xwy*>ri}{!lx;|sggoMW$SSS80kXhXPEMWWBQ9
-                                        +QC@?T\>(:JC"hUqlQeF4%9Z8kkkPkwKQWWWBQN
-                                         XJxDHc)s|?<akAP7Q3W59$Z80kkwmQWWWWWQWy
-                                         \RQQoMnao{);56GKt#aW59$8PEHQWWWWWWBW4
-                                          2eMnaVEWWWhg1NsNYJuW5$GDWWWWWWWWQQQ^
-                                          ,&I5URWWBWWWB@Ze#u4ZE&QWWWWWWWWWNW}
-                                           jPOWWWWWQBWWWWWR&pwRWWWQWWWWWWBWE+
-                                           _zWBWWWWWWw#Y%$agRb}zXRWWWWWWQQtr
-                                            8WBWWQWZS=jeSE}DCjMBQguKWQWWBWA
-
-
- maheensayuru@github:~/workspace$
+                                                        ' -'`
+                                              *]L+1|:>Y#X4ZUAVfj1!
+                                       -^_1^xj"eI3#SA?Xh8X"ar#eXey#"z2ti;
+                                    .<>Lx=/%3jt>+cT#z:f2C>*FFzs=uo)S55A4I>*'
+                                 _\v^st{/*]=us:[L)l*:)ic=sy*\ne*x1xn*{fu<IrUC~
+                               ~:lLT<Y*#=<tf><T:F/jyzcl^!!!iv!Jy^7}Lc([cTr+)i,=
+                          `"*|vt2=ojJ*zs{teI>xt{lf>1:lx(.`.'-.<Lc]?\=.  .`   ~_-+`
+                         ~?nyci(7?<F2>+*v~!}r|\-~''-_.'`.          `-       `.'~_'~
+                        -<\l:}{*^`_?xvLLLr+:.-;~`` .         .~,_-.  _-!!:/;=-_`'^'
+                       .,``!-,<- `  _~^'.ri"<:   `-+(xJu"X?PrInfYv(,*\*='rv":,. -_:-
+                       ..       `-        '"{<n%p@3apNNBNwBb94t+zoF+:/r7[!(;>~:`. _-
+                              `-_!+~<*v+o6{QVEHWWWWWWWWWW5wP$$)$r#\9(V(3<{:c7},+` ~_              maheensayuru@github
+                        `  -+<r[^fue%E|tWPUGpbq@HRRBQQNRXO)?PXhP{aV?5#C"#"<JYxxi"~_.              ───────────────────
+                        ` `,c:<z"0&g2C#3jI96$XhUb@HDD@Xh#Ok06+f\6yI(yJu3eo<z=1<s1x)
+                         ,xJsfz5wn68ZZS0kXhkPPAGb@mOm@qE5l}GA(#5V2CeeuS#y2usYYCux:"               Name         Maheen Sayuru
+                         -Fn3acNnZUGqbOH&Oddb@KmmKKbGAX89FJRH|6r;3FIZF#nZk80FjVlfCL               Role         Software Engineering Undergrad (Year 2)
+                         <(bJ$668XUEqmKgBNWWWWBBRDHKpX0654WW3fL6Z5$)0k%Pk[b9"uoxxCc               Focus        AI Agent Systems, Backend & DevSecOps
+                         zpNMnyeyM3FIZZZ$0AAkdWWWWWNmUS6%4II5nol6%)eU88ihr5\)uFul}~
+                        =!YzV?99%5e#uJ:}[}1=XJ0aSOBBDmGAkPkXhSuQm]kX(S%5\EQaIu}z17-               Degree       BSc (Hons) in Software Engineering (Year 2)
+                       .!~~^<:FCj+i'^..:+<*?FhAG|&on9XbdbEUUUG$F2|7iZGlzWA8L}A9a4v                Workflow     Autonomous AI Agents across Engineering Roles
+                        ),^_`:\[lll[(<-_-`_,";(lJ\Ed@g4kEpq@@dEkWf&|NIbpFr}+*2xgM+
+                         -.={"~)n;CYr^``-_)Y<fj"//Atj8wOHH&KKmm@Z1RkMhzwCapWWW7n3<                Languages    Go, Python, TypeScript, Java, SQL
+                         `=)rllwp4wrt}"_'i{lzPRIwOO@&RWWQBMO@@KHGTCRKEWbUv]F&Dglo=                Systems      WebAssembly (WASI), TCP/IP, Reverse Proxies
+                         `li*9WWWWNkBp$#Fz24ix4U@gWWQWWWWWgOGwEq8@uBBRWM;fc)jEBm$                 Security     DevSecOps Tooling, Shannon Entropy, Zero-Telemetry
+                         \CcEWNBQBWWWgP500$IWV0A@HNQWWWWWQHpkZSPu[eR@VFVw6Sa{@Nd
+                         (%WWBWWWQQBBOXAUb&H&HgHDgRBBBBRD@AS69ZStAeO63XWWDAFFVE                   Projects     ShadowGuard (DevSecOps), Aegis (WASM Gateway)
+                         cwpBWBBBWWWW@YRe9hEp@m&HgMDmdqAX06800S4&qyE2TZ0M8OOQT                                 GraphRAG Interceptor, FaultLine (Chaos Proxy)
+                           ^lAIyy#9@CShBHx39ZAUkSPXPZZIj598XhXh9H}IwTpWQRBEa
+                           `*-.~vzhBhOmAes1gFV$9%W%W4aa%I%ZhwpO9d]uWoaDYTwV                       GitHub       github.com/maheensayuru
+                             .`c$btjZVj3yM#2#aW%WjyJC#yaV$XbdX4N7P&vv+"[1X|                       LinkedIn     linkedin.com/in/maheen-sayuru
+                          .<;,*?ict;3Ju(%GOTCJogBo2oeF4Wj9Z3z@v}U)qrv71t)b~                       Email        maheen.sayuru21@gmail.com
+                          ,|L7^sF#3*]. ':7FENgNx1zggQg2tb]cUS%Z4;V%=c<I5s?
+                          -s)8@g2fgCt76*"^7#]lRLvwL}ikPau*jIjsJzJF;!nD%$h=
+                          -}i]lYzeG&gJuB)7"fSGE)Vu;u*FCtl(]1L!xL})G8eUwXPs
+                           ..  ,']J/PA88\^i1j3uJtc^{?v[rr*,?(v)"yH2aIV80$s
+                            ~/^>Crk$$/#CY^xLl>stY7|/-'-!;<;/*;*>}23FjV6$8t
+                             ]{>)hA65CYyYlc/?,v(>-!,..,:!^_+=(odtCjI%%9V9H<
+                             ` :?[^^xL/*\=-=;:~-`_..~`'-_+'(TZ{&YCnIV5WWaXqS
+                                  ~:~_+:~~~.__-`',..'.-~;|xuh{wsJF%VWW4W5SbW"
+                                   ````_.-.,~_~~~.+++=*|tePcwxBena4WajWVXhZQU_
+                                       ,v\.!+'=_+^+~r^*rUpb@QJuyMM4%WW5$XbQBWH
+                                       -&HJ>^<r|vv]LsZ8]i]}xoy33ynW599IZ@WWBQ3
+                                       -Nfv)^;+/cYsj#/5h0}wD1gJ3j4%WW6UNWWWBWw
+                                        )2mObkV:\\^u\/o"EKRNYoJeF4j5wgWWWWQBQT
+                                        /ls1sQfox0;=2I/rk7LxtYoMn9GRWWQWWWBW2
+                                         =2CeMaPRWB6m0AP6EpORz2IqNWWQWWWWQQM|
+                                         ~mW%P&WWBBWWHkf{]O&g4UNWWQWWWWWWBWU
+                                          *SGRWWWWBQWWWROpXaamWWWQQWWWWWBWZ,
+                                          ~@WggNBWWQ9l{tQDp6e(bW&WWWWWWQQL<
+                                           ?WDMgBQaV{^Ju#eSpLdGU]&pWQWWBWr

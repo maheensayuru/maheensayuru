@@ -5,6 +5,7 @@ on:
     paths:
       - asciifetch.toml
       - headshot.jpg
+      - generate_banner.py
   workflow_dispatch:
 
 permissions:
@@ -17,18 +18,25 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Rebuild asciifetch banner
-        uses: ganji759/asciifetch@v1
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          config: asciifetch.toml
-          src: headshot.jpg
-          out: .
-          formats: svg,png,txt
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install git+https://github.com/ganji759/asciifetch.git
+          pip install opencv-python-headless pillow numpy
+
+      - name: Rebuild custom banner
+        run: |
+          python generate_banner.py
 
       - name: Commit updated banner
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add fastfetch.svg fastfetch.png fastfetch.txt avatar.jpg avatar-ascii.png
-          git diff --staged --quiet || git commit -m "chore: rebuild asciifetch banner"
+          git diff --staged --quiet || git commit -m "chore: rebuild frameless B&W asciifetch banner"
           git push
