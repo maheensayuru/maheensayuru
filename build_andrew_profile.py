@@ -2,49 +2,72 @@ import os
 import re
 import numpy as np
 from PIL import Image, ImageEnhance, ImageFilter
+from asciifetch.ascii_art import ascii_grid, build_ramp
+from asciifetch.fonts import font_path
+from asciifetch.config import load_config
+from asciifetch.cv import resolve_crops, resolve_method
+from asciifetch.mask import pixel_box
 
 def generate_andrew_svgs():
-    img_path = "C:/tmp/maheensayuru/headshot.jpg"
-    
-    # 1. Generate 25 lines of ASCII art
-    raw_img = Image.open(img_path).convert("L")
-    w, h = raw_img.size
-    crop_img = raw_img.crop((int(w * 0.10), int(h * 0.03), int(w * 0.90), int(h * 0.96)))
-    
-    # Andrew6rant ASCII dimensions: 25 rows x 38 cols
-    rows = 25
+    config_path = "C:/tmp/maheensayuru/asciifetch.toml"
+    cfg = load_config(config_path)
+    cfg.src = "C:/tmp/maheensayuru/headshot.jpg"
+    resolve_crops(cfg)
+
+    # 1. Generate 25 lines of ASCII art using GrabCut segmentation
+    font_r = font_path("regular", cfg.font_dir)
+    font_b = font_path("bold", cfg.font_dir)
+    ramp = build_ramp(font_r, font_b, cfg.cell_w, cfg.cell_h, cfg.font_size)
+
     cols = 38
-    
-    # Enhance contrast and details for glitch bar and face
-    resized = crop_img.resize((cols, rows), Image.LANCZOS)
-    enh = ImageEnhance.Contrast(resized).enhance(1.8)
-    bright = ImageEnhance.Brightness(enh).enhance(1.1)
-    
-    # Ramp tailored to Andrew6rant's character set
-    ramp_dark = " .'`^~!,:;*|ijkhwpm%@MWNH"
-    ramp_light = " .'`^~!,:;*|ijkhwpm%@MWNH"[::-1]
-    
+    box = pixel_box(Image.open(cfg.src).size, cfg.portrait_crop)
+    prows, idx, colors, m = ascii_grid(
+        cfg.src, box, cols, len(ramp), cfg.cell_w, cfg.cell_h,
+        mask_k=cfg.mask_k, mask_width=cfg.mask_width,
+        method="grabcut", even_light=True
+    )
+
+    target_rows = 25
     dark_ascii_lines = []
     light_ascii_lines = []
-    
-    arr = np.array(bright, dtype=np.float32)
-    p_lo, p_hi = np.percentile(arr, 2), np.percentile(arr, 98)
-    norm = np.clip((arr - p_lo) / max(1, p_hi - p_lo), 0, 1)
-    
-    for y_idx in range(rows):
-        d_line = ""
-        l_line = ""
-        for x_idx in range(cols):
-            val = norm[y_idx, x_idx]
-            d_idx = int(val * (len(ramp_dark) - 1))
-            l_idx = int(val * (len(ramp_light) - 1))
-            d_line += ramp_dark[d_idx]
-            l_line += ramp_light[l_idx]
-        d_line = d_line.ljust(cols)
-        l_line = l_line.ljust(cols)
-        dark_ascii_lines.append(d_line)
-        light_ascii_lines.append(l_line)
-    
+
+    ramp_andrew_dark = " .'`^~!,:;*|ijkhwpm%@MWNH"
+    ramp_andrew_light = " .'`^~!,:;*|ijkhwpm%@MWNH"[::-1]
+
+    top_pad = (target_rows - prows) // 2
+    bottom_pad = target_rows - prows - top_pad
+
+    for _ in range(top_pad):
+        dark_ascii_lines.append(" " * cols)
+        light_ascii_lines.append(" " * cols)
+
+    for y in range(prows):
+        d_row = ""
+        l_row = ""
+        for x in range(cols):
+            i = y * cols + x
+            if m[i] >= 40:
+                k = idx[i]
+                norm_k = k / (len(ramp) - 1)
+                r_p, g_p, b_p = colors[i]
+                photo_lum = (0.299 * r_p + 0.587 * g_p + 0.114 * b_p) / 255.0
+                comb = 0.5 * norm_k + 0.5 * photo_lum
+                
+                d_idx = int(min(len(ramp_andrew_dark) - 1, max(0, comb * len(ramp_andrew_dark))))
+                l_idx = int(min(len(ramp_andrew_light) - 1, max(0, comb * len(ramp_andrew_light))))
+                
+                d_row += ramp_andrew_dark[d_idx]
+                l_row += ramp_andrew_light[l_idx]
+            else:
+                d_row += " "
+                l_row += " "
+        dark_ascii_lines.append(d_row)
+        light_ascii_lines.append(l_row)
+
+    for _ in range(bottom_pad):
+        dark_ascii_lines.append(" " * cols)
+        light_ascii_lines.append(" " * cols)
+
     def esc(s):
         return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
@@ -184,7 +207,7 @@ def generate_andrew_svgs():
     with open("C:/tmp/maheensayuru/light_mode.svg", "w", encoding="utf-8") as f:
         f.write(light_svg_content)
         
-    print("Generated dark_mode.svg and light_mode.svg successfully!")
+    print("Generated dark_mode.svg and light_mode.svg successfully with suit headshot!")
 
 if __name__ == "__main__":
     generate_andrew_svgs()
