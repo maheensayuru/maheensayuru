@@ -8,6 +8,7 @@ from asciifetch.mask import pixel_box
 
 def generate_banner(config_path="asciifetch.toml", out_dir="."):
     cfg = load_config(config_path)
+    cfg.src = "C:/tmp/maheensayuru/headshot.jpg"
     resolve_crops(cfg)
     mask_method = resolve_method(cfg.mask_method)
 
@@ -43,7 +44,7 @@ def generate_banner(config_path="asciifetch.toml", out_dir="."):
             line_len = cfg.label_width + len(val)
             if line_len > max_field_len:
                 max_field_len = line_len
-    total_cols = max(info_col + max_field_len + 2, 162)
+    total_cols = max(info_col + max_field_len + 2, 163)
 
     # Clean frameless canvas geometry
     pad_x = 24
@@ -53,8 +54,8 @@ def generate_banner(config_path="asciifetch.toml", out_dir="."):
     ox = pad_x
     oy = pad_y
 
-    # Canvas setup
-    bg_color = cfg.color("bg")
+    # Matrix / Dark Terminal Background
+    bg_color = (13, 17, 23)  # #0d1117
     im = Image.new("RGB", (can_w, can_h), bg_color)
     draw = ImageDraw.Draw(im)
 
@@ -68,7 +69,32 @@ def generate_banner(config_path="asciifetch.toml", out_dir="."):
             draw.text((x, y), ch, font=f, fill=fill, anchor="ms")
             cells.append((row, col + k_idx, ch, fill, bold))
 
-    # Render Black and White / Grayscale ASCII portrait
+    # Helper function for phosphor / matrix green gradient mapping
+    def green_gradient(lum):
+        # lum is 0.0 to 1.0
+        # Smooth interpolation:
+        # Low: dark forest green (20, 70, 35)
+        # Mid: emerald matrix green (50, 185, 80)
+        # High: vibrant phosphor green (86, 225, 120)
+        # Peak: bright pale mint highlight (185, 250, 195)
+        if lum < 0.35:
+            t = lum / 0.35
+            r = int(18 + (38 - 18) * t)
+            g = int(60 + (145 - 60) * t)
+            b = int(28 + (60 - 28) * t)
+        elif lum < 0.75:
+            t = (lum - 0.35) / 0.40
+            r = int(38 + (86 - 38) * t)
+            g = int(145 + (225 - 145) * t)
+            b = int(60 + (115 - 60) * t)
+        else:
+            t = (lum - 0.75) / 0.25
+            r = int(86 + (185 - 86) * t)
+            g = int(225 + (255 - 225) * t)
+            b = int(115 + (195 - 115) * t)
+        return (min(255, max(0, r)), min(255, max(0, g)), min(255, max(0, b)))
+
+    # Render Green Phosphor ASCII portrait
     for i, k in enumerate(idx):
         if m[i] < 40:
             continue
@@ -76,13 +102,13 @@ def generate_banner(config_path="asciifetch.toml", out_dir="."):
         if ch == " ":
             continue
         
-        # Black and white tone mapping: crisp monochrome shading
         norm_k = k / (len(ramp) - 1)
         r_p, g_p, b_p = colors[i]
         photo_lum = (0.299 * r_p + 0.587 * g_p + 0.114 * b_p) / 255.0
         combined_lum = 0.45 * norm_k + 0.55 * photo_lum
-        gray_val = int(min(255, max(60, 60 + 195 * (combined_lum ** 0.82))))
-        col_rgb = (gray_val, gray_val, gray_val)
+        # Apply slight curve to give rich depth
+        curved_lum = min(1.0, max(0.0, (combined_lum ** 0.85)))
+        col_rgb = green_gradient(curved_lum)
 
         pcol = i % portrait_cols
         prow = i // portrait_cols
@@ -92,10 +118,17 @@ def generate_banner(config_path="asciifetch.toml", out_dir="."):
         draw.text((x, y), ch, font=(fontb if bold else font), fill=col_rgb, anchor="ms")
         cells.append((prow, pcol, ch, col_rgb, bold))
 
+    # Green Palette for text
+    color_green_user = (86, 211, 100)     # #56d364 (vivid terminal green)
+    color_green_line = (35, 134, 54)      # #238636 (green divider)
+    color_green_label = (126, 231, 135)   # #7ee787 (bright mint green for labels)
+    color_text = (230, 237, 243)          # #e6edf3 (crisp text)
+    color_muted = (139, 148, 158)         # #8b949e (muted continuation)
+
     # Render Info Block on the right side
     r = info_start_row
-    put_text(info_col, r, cfg.user, cfg.color("green"), bold=True)
-    put_text(info_col, r + 1, "─" * len(cfg.user), cfg.color("line"))
+    put_text(info_col, r, cfg.user, color_green_user, bold=True)
+    put_text(info_col, r + 1, "─" * len(cfg.user), color_green_line)
     r += 3
 
     for f in cfg.fields:
@@ -104,9 +137,9 @@ def generate_banner(config_path="asciifetch.toml", out_dir="."):
             continue
         lab, val = f
         if lab:
-            put_text(info_col, r, lab, cfg.color("accent"), bold=True)
+            put_text(info_col, r, lab, color_green_label, bold=True)
         put_text(info_col + cfg.label_width, r, val,
-                 cfg.color("text") if lab else cfg.color("muted"))
+                 color_text if lab else color_muted)
         r += 1
 
     r += 1
@@ -197,7 +230,7 @@ def generate_banner(config_path="asciifetch.toml", out_dir="."):
     with open(txt_path, "w", encoding="utf-8") as f:
         f.write(txt_content)
 
-    print(f"Generated successfully: {can_w}x{can_h}px, {total_cols}x{total_rows} chars")
+    print(f"Generated green theme successfully: {can_w}x{can_h}px, {total_cols}x{total_rows} chars")
     print(f"  svg: {svg_path}")
     print(f"  png: {png_path}")
     print(f"  txt: {txt_path}")
