@@ -1,10 +1,15 @@
 <p align="center">
-  <img src="fastfetch.svg" width="100%" alt="Maheen Sayuru - fastfetch profile banner" />
+  <a href="https://github.com/maheensayuru">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/maheensayuru/maheensayuru/main/dark_mode.svg">
+      <img alt="Maheen Sayuru's GitHub Profile" src="https://raw.githubusercontent.com/maheensayuru/maheensayuru/main/light_mode.svg" width="100%">
+    </picture>
+  </a>
 </p>
 
 ## About Me
 
-I am a second-year Software Engineering undergraduate focused on AI agent systems, backend infrastructure, and DevSecOps tooling. I build and orchestrate autonomous AI agents across engineering workflows, including system architecture, implementation, automated code review, and security testing.
+I am a second-year Software Engineering undergraduate focused on autonomous AI agent systems, backend infrastructure, and DevSecOps tooling. I build and orchestrate AI agents across engineering workflows, from architectural design and coding to automated testing and vulnerability detection.
 
 My core work centers on concurrent systems in Go and Python, WebAssembly runtime extensions, and privacy-first security tools.
 

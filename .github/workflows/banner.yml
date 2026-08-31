@@ -1,11 +1,10 @@
-name: Rebuild Profile Banner
+name: Rebuild Profile Card
 
 on:
   push:
     paths:
-      - asciifetch.toml
       - headshot.jpg
-      - generate_banner.py
+      - build_andrew_profile.py
   workflow_dispatch:
 
 permissions:
@@ -26,17 +25,16 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install git+https://github.com/ganji759/asciifetch.git
-          pip install opencv-python-headless pillow numpy
+          pip install pillow numpy opencv-python-headless
 
-      - name: Rebuild custom banner
+      - name: Rebuild Andrew6rant style SVG cards
         run: |
-          python generate_banner.py
+          python build_andrew_profile.py
 
-      - name: Commit updated banner
+      - name: Commit updated cards
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add fastfetch.svg fastfetch.png fastfetch.txt avatar.jpg avatar-ascii.png
-          git diff --staged --quiet || git commit -m "chore: rebuild frameless B&W asciifetch banner"
+          git add dark_mode.svg light_mode.svg
+          git diff --staged --quiet || git commit -m "chore: rebuild Andrew6rant profile SVGs"
           git push
