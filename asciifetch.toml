@@ -1,0 +1,56 @@
+[identity]
+user = "maheensayuru@github"
+cwd  = "~/workspace"
+title = "maheensayuru@fastfetch: ~"
+
+[image]
+src = "headshot.jpg"
+portrait_crop = "auto"
+avatar_crop   = "auto"
+
+[info]
+fields = [
+  ["Name",      "Maheen Sayuru"],
+  ["Role",      "Software Engineering Undergrad (Year 2)"],
+  ["Focus",     "AI Agent Systems, Backend & DevSecOps"],
+  [],
+  ["Degree",    "BSc (Hons) in Software Engineering (Year 2)"],
+  ["Workflow",  "Autonomous AI Agents across Engineering Roles"],
+  [],
+  ["Languages", "Go, Python, TypeScript, Java, SQL"],
+  ["Systems",   "WebAssembly (WASI), TCP/IP, Reverse Proxies"],
+  ["Security",  "DevSecOps Tooling, Shannon Entropy, Zero-Telemetry"],
+  [],
+  ["Projects",  "ShadowGuard (DevSecOps), Aegis (WASM Gateway)"],
+  ["",          "GraphRAG Interceptor, FaultLine (Chaos Proxy)"],
+  [],
+  ["GitHub",    "github.com/maheensayuru"],
+  ["LinkedIn",  "linkedin.com/in/maheen-sayuru"],
+  ["Email",     "maheen.sayuru21@gmail.com"],
+]
+
+[output]
+dir = "."
+formats = ["svg", "png", "txt", "avatar", "avatar-ascii"]
+
+[layout]
+cols = 0
+rows = 0
+portrait_cols = 92
+info_col = 98
+label_width = 13
+
+[palette]
+bg     = "#0d1117"
+bar    = "#161b22"
+line   = "#30363d"
+text   = "#e6edf3"
+muted  = "#8b949e"
+accent = "#58a6ff"
+green  = "#3fb950"
+blue   = "#79c0ff"
+red    = "#ff7b72"
+yellow = "#d29922"
+
+[mask]
+method = "auto"

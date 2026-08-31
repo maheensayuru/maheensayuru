@@ -1,0 +1,34 @@
+name: Rebuild Profile Banner
+
+on:
+  push:
+    paths:
+      - asciifetch.toml
+      - headshot.jpg
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Rebuild asciifetch banner
+        uses: ganji759/asciifetch@v1
+        with:
+          config: asciifetch.toml
+          src: headshot.jpg
+          out: .
+          formats: svg,png,txt
+
+      - name: Commit updated banner
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add fastfetch.svg fastfetch.png fastfetch.txt avatar.jpg avatar-ascii.png
+          git diff --staged --quiet || git commit -m "chore: rebuild asciifetch banner"
+          git push

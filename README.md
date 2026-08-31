@@ -1,28 +1,45 @@
-<img src="new green.png" width="100%" alt="Backend Architecture Banner">
 <p align="center">
-<b>Backend Engineer | System Architecture & DevSecOps</b><br>
-  Architecting secure, high-concurrency backend systems and developer tools.<br>
-  Engineering high-throughput, concurrent infrastructure in Go, Java, and Python.
+  <img src="fastfetch.svg" width="100%" alt="Maheen Sayuru - fastfetch profile banner" />
 </p>
 
-### ⚙️ Technical Arsenal
+## About Me
 
-* **Languages:** Go, Java, Python, TypeScript, SQL, WebAssembly (WASM)
-* **Architecture:** Multi-threading, TCP/IP Networking, REST APIs, Client-Server Models, Zero-Downtime Hot-Swapping, Mutex Concurrency
-* **Database:** Relational Database Management Systems (RDBMS), MySQL, Neo4j
-* **Security:** DevSecOps Tooling, Shannon Entropy, SHA-256 Cryptography, SSL/TLS Encryption
+I am a second-year Software Engineering undergraduate focused on AI agent systems, backend infrastructure, and DevSecOps tooling. I build and orchestrate autonomous AI agents across engineering workflows, including system architecture, implementation, automated code review, and security testing.
 
-<br>
+My core work centers on concurrent systems in Go and Python, WebAssembly runtime extensions, and privacy-first security tools.
 
-### 🏗️ Featured Engineering
+---
 
-* **DevSecOps (ShadowGuard):** Engineered an air-gapped VS Code extension in Go and TypeScript, utilizing concurrent Go routines and Shannon Entropy for real-time secret detection with zero telemetry.
-* **Systems Engineering (Aegis):** Architected a zero-downtime API gateway in Go, utilizing WebAssembly (WASI) sandboxing, LLVM compilation (TinyGo), and RWMutex locks for hot-swappable, millisecond-latency security middleware.
-* **Chaos Engineering (FaultLine):** Architected a multi-threaded, localized TCP proxy to inject network latency and connection failures into databases, enforcing self-healing backend code.
-* **AI Infrastructure (GraphRAG):** Architected a low-latency reverse proxy that intercepts client completion payloads, extracts functional entities via multi-tier regex matching, and dynamically injects 2-hop downstream codebase dependencies from Neo4j into real-time streaming LLM inference windows.
-* **DevSecOps (KeyGuard):** Engineered an automated, regex-based Git pre-commit hook to prevent secret leakage in CI/CD pipelines.
-* **Distributed Systems (Nexus):** Developed a multi-threaded chat server ecosystem with secure, live JDBC database transactions.
+## Featured Projects
 
-<br><br>
+* **[ShadowGuard](https://github.com/shadowguard-security/ShadowGuard)**  
+  Air-gapped DevSecOps VS Code extension built in Go and TypeScript. Analyzes source files in real time using concurrent Goroutines and Shannon Entropy to catch leaked secrets and API keys with zero telemetry.
 
-📬 **Reach out:** www.linkedin.com/in/maheen-sayuru | maheen.sayuru21@gmail.com
+* **[Aegis Proxy](https://github.com/maheensayuru/aegis-proxy)**  
+  Zero-downtime reverse proxy written in Go. Uses WebAssembly (WASI) sandboxing via TinyGo and RWMutex locking to hot-swap security middleware without dropping live connections.
+
+* **[GraphRAG Interceptor](https://github.com/maheensayuru/Graphrag-interceptor-proxy)**  
+  Real-time AST parsing and GraphRAG proxy engine in Python. Intercepts OpenAI-compatible completions, extracts functional references, and injects 2-hop downstream Neo4j codebase dependencies into streaming LLM context windows.
+
+* **[FaultLine](https://github.com/maheensayuru/FaultLine)**  
+  Localized chaos engineering proxy. Intercepts raw TCP/IP streams between application layers and databases to inject jitter, latency, and sudden connection drops, testing resilience under network faults.
+
+* **[Nexus Ecosystem](https://github.com/maheensayuru/Nexus-Chat-Server)**  
+  Multi-threaded chat and banking system in Java. Implements SSL/TLS encrypted TCP/IP networking, SHA-256 password hashing, and ACID-compliant JDBC transaction management.
+
+---
+
+## Technical Stack
+
+* **Languages:** Go, Python, TypeScript, Java, SQL, WebAssembly (WASI)
+* **AI & Agent Workflows:** Autonomous Agent Tooling, Multi-Agent Orchestration, GraphRAG, AST Extraction
+* **Systems & Security:** Reverse Proxies, Goroutines & Mutex Concurrency, Shannon Entropy, Chaos Engineering, SSL/TLS
+* **Databases & Tools:** Neo4j, MySQL, Git Hooks, Linux, Docker
+
+---
+
+## Connect
+
+* **GitHub:** [github.com/maheensayuru](https://github.com/maheensayuru)
+* **LinkedIn:** [linkedin.com/in/maheen-sayuru](https://www.linkedin.com/in/maheen-sayuru)
+* **Email:** [maheen.sayuru21@gmail.com](mailto:maheen.sayuru21@gmail.com)
